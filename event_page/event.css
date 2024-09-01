@@ -23,7 +23,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    
+}
+
+.event:last-child {
+    margin-bottom: 50px;
 }
 
 .event img {
@@ -69,6 +72,10 @@
     border-radius: 20px;
     margin-bottom: 5%;
     margin-top: 5%
+}
+
+.event-text-container:first-child {
+    margin-top: 0%;
 }
 
 .event-text-container::after {
@@ -162,4 +169,118 @@
 
 .sign-up:hover{
     z-index: 0;
+}
+
+.past-event {
+    width: 75%;
+    max-width: 2400px;
+    min-width: 1400px;
+    background-color: #111111;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    border: 4px solid #282A3A;
+    border-radius: 15px;
+    margin: 8px;
+}
+
+.past-event:last-child {
+    margin-bottom: 20px;
+}
+
+.past-event-title {
+    height: 85%;
+    width: 50%;
+    display: flex;
+    margin: 20px 20px 0px 20px;
+}
+
+.past-event-title p {
+    color: #EEEEEE;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.8em;
+    transition: font-size 0.4s ease;
+}
+
+.past-event:hover .past-event-title{
+    font-size: 1.4em;
+}
+
+.arrow-button {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 10px;
+    margin: 0px 10px 0px 10px;
+}
+
+.arrow {
+    height: 40%;
+    width: 40%;
+    transform: rotate(45deg);
+    border-radius: 4px;
+    border-bottom: 6px solid #282A3A;
+    border-right: 6px solid #282A3A;
+    transition: border-color 0.3s ease;
+}
+
+.past-event:hover .arrow{
+    border-bottom: 6px solid #EEEEEE;
+    border-right: 6px solid #EEEEEE;
+}
+
+.past-event-text {
+    height: 0px;
+    width: 65%;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.past-event:hover .past-event-text{
+    height: 250px;
+}
+
+.past-event-text p {
+    font-size: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #EEEEEE;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.past-event:hover .past-event-text p{
+    opacity: 1;
+}
+
+.past-event-image-container {
+    height: 0px;
+    width: 24%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+}
+
+.past-event:hover .past-event-image-container{
+    height: 250px;
+}
+
+.past-event-image {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.past-event:hover .past-event-image{
+    opacity: 1;
 }
