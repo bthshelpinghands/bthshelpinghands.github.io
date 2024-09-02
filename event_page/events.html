@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/event_page/event.css">
-    <title>Document</title>
+    <title>Events</title>
 </head>
 <body class="body-gradient">
     <div class="header">
@@ -32,52 +32,59 @@
     <h1 class="event-heading">Upcoming events</h1>
 
     <div class="event-container">
-        <div class="event">
-            <img src="/static_assets/tree.jpg" alt="christmas tree" class="image-left">
+        <div id="slide-one"></div>
+        <div id="slide-two"></div>
+        <div class="slideshow-container">        
+            <div class="event">
+                <img src="/static_assets/tree.jpg" alt="christmas tree" class="image-left">
 
-            <div class="event-info">
-                <div class="event-text-container info-left">
-                    <div class="event-text">
-                        <h1>Christmas</h1>
-                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p>Time: 3:00 pm 12/25/24</p>
-                        <p>Location: 350 11th Ave, New York, NY 10001</p>
-                        <p>Info: 4 hours - 16 points</p>
+                <div class="event-info">
+                    <div class="event-text-container info-left">
+                        <div class="event-text">
+                            <h1>Christmas</h1>
+                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>Time: 3:00 pm 12/25/24</p>
+                            <p>Location: 350 11th Ave, New York, NY 10001</p>
+                            <p>Info: 4 hours - 16 points</p>
+                        </div>
+                    </div> 
+                    <div class="sign-up sign-up-left">
+                        <a><p>Sign Up</p></a>
                     </div>
-                </div> 
-                <div class="sign-up sign-up-left">
-                    <a><p>Sign Up</p></a>
+                </div>
+            </div>
+
+            <div class="event">
+                <img src="/static_assets/tree.jpg" alt="christmas tree" class="image-right">
+
+                <div class="event-info">
+                    <div class="event-text-container text-container-right">
+                        <div class="event-text text-right">
+                            <h1>Christmas</h1>
+                            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            <p>Time: 3:00 pm 12/25/24</p>
+                            <p>Location: 350 11th Ave, New York, NY 10001</p>
+                            <p>Info: 4 hours - 16 points</p>
+                        </div>
+                    </div> 
+                    <div class="sign-up sign-up-right">
+                        <a><p>Sign Up</p></a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="event">
-            <img src="/static_assets/tree.jpg" alt="christmas tree" class="image-right">
-
-            <div class="event-info">
-                <div class="event-text-container text-container-right">
-                    <div class="event-text text-right">
-                        <h1>Christmas</h1>
-                        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p>Time: 3:00 pm 12/25/24</p>
-                        <p>Location: 350 11th Ave, New York, NY 10001</p>
-                        <p>Info: 4 hours - 16 points</p>
-                    </div>
-                </div> 
-                <div class="sign-up sign-up-right">
-                    <a><p>Sign Up</p></a>
-                </div>
-            </div>
+        <div class="slide-buttons">
+            <a href="#slide-one"></a>
+            <a href="#slide-two"></a>
         </div>
-       
-        
-
-
     </div>
+
+    
     
     <h1 class="event-heading">Past Events</h1>
 
-    <div class="event-container">
+    <div class="past-event-container">
         <div class = "past-event">
             <div class="past-event-title">
                 <p>Helping Hands Driveby - 12/15/24</p>
@@ -93,10 +100,7 @@
             <div class="past-event-image-container">
                 <img src="/static_assets/tree.jpg" alt="christmas tree" class="past-event-image">
             </div>
-
-
         </div>
-
 
         <div class = "past-event">
             <div class="past-event-title">
@@ -113,9 +117,29 @@
             <div class="past-event-image-container">
                 <img src="/static_assets/tree.jpg" alt="christmas tree" class="past-event-image">
             </div>
-
-
         </div>
+
+        <div class = "past-event">
+            <div class="past-event-title">
+                <p>Helping Hands Driveby - 12/15/24</p>
+            </div>
+            <div class="arrow-button">
+                <div class="arrow">
+                </div>
+            </div>
+            <div class="past-event-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+            </div>
+            <div class="past-event-image-container">
+                <img src="/static_assets/tree.jpg" alt="christmas tree" class="past-event-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Website Issues - amoungus@gmail.com</p>
+        <p>Club questions - amoungus@gmail.com</p>
     </div>
 
 </body>
