@@ -14,19 +14,70 @@
     justify-content: center;
 }
 
-.event {
-    height: 700px;  
+.slideshow-container {
+    height: 700px;
     width: 80%;
-    min-width: 1600px;
+    min-width: 1800px;
+    max-width: 2600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.event {
+    height: 100%;  
+    width: 100%;
+    min-width: 1800px;
     max-width: 2600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    left: 0;
+    transition: transform 0.8s ease-in-out;
+   
 }
 
-.event:last-child {
-    margin-bottom: 50px;
+.slideshow-container .event:nth-child(1) {
+    transform: translateX(0%);
+}
+
+.slideshow-container .event:nth-child(2) {
+    transform: translateX(100%);
+}
+
+#slide-two:target ~ .slideshow-container .event:nth-child(1) { 
+    transform: translateX(-100%);
+}
+
+#slide-two:target ~ .slideshow-container .event:nth-child(2) { 
+    transform: translateX(0%);
+}
+
+#slide-one, #slide-two {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+
+.slide-buttons {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.slide-buttons a {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 0 5px;
+    background-color: #282A3A;
+    transition: background-color 0.3s ease;
+}
+
+.slide-buttons a:hover {
+    background-color: #EEEEEE;
 }
 
 .event img {
@@ -169,6 +220,13 @@
 
 .sign-up:hover{
     z-index: 0;
+}
+
+.past-event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .past-event {
