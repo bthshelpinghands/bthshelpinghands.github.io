@@ -76,7 +76,27 @@
     transition: background-color 0.3s ease;
 }
 
-.slide-buttons a:hover {
+.slide-buttons a:nth-child(1) {
+    background-color: #EEEEEE;
+}
+
+.slide-buttons a:nth-child(2) {
+    background-color: #282A3A;
+}
+
+#slide-one:target ~ .slide-buttons a:nth-child(1) {
+    background-color: #EEEEEE;
+}
+
+#slide-one:target ~ .slide-buttons a:nth-child(2) {
+    background-color: #282A3A;
+}
+
+#slide-two:target ~ .slide-buttons a:nth-child(1) {
+    background-color: #282A3A;
+}
+
+#slide-two:target ~ .slide-buttons a:nth-child(2) {
     background-color: #EEEEEE;
 }
 
