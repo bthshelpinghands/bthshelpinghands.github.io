@@ -11,37 +11,37 @@ html {
 .body-gradient {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom left, #050505, #1E1E1E);
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left, #050505, #1E1E1E);
     background-attachment: fixed;
 }
 
 .header {
-    height: 95px;
-    width: 100%;
-    background-color: #151515;
-    color: #EEEEEE;
-    border-bottom: 4px solid #282A3A;
     position: sticky;
-    top: 0;
     z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 95px;
+    background-color: #151515;
+    border-bottom: 4px solid #282A3A;
+    color: #EEEEEE;
 }
 
 .inner-header {
-    height: 100%;
-    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+    height: 100%;
     margin: 0 auto;
 }
 
 .logo-container {
-    height: 100%;
-    width: 550px;
     display: flex;
     align-items: center;
+    width: 550px;
+    height: 100%;
 }
 
 .logo-container img {
@@ -50,27 +50,27 @@ html {
 }
 
 .logo-text {
-    height: 100%;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .logo-text h1 {
-    color: #EEEEEE;
     font-size: 55px;
     font-family: "M PLUS Rounded 1c", sans-serif;
+    color: #EEEEEE;
 }
 
 .navigation {
-    height: 100%;
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .navigation a {
-    height: 50%;
     display: flex;
     align-items: center;
+    height: 50%;
     padding: 0px 10px;
     color: inherit;
     text-decoration: none;
@@ -81,27 +81,27 @@ html {
 }
 
 .navigation a li {
-    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    padding: 0 15px;
     background-color: #151515;
+    border-radius: 20px;
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 0 15px;
-    position: relative;
-    border-radius: 20px;
+    text-align: center;
 }
 
 .navigation a li::after {
     content: "";
     position: absolute;
-    height: 105%;
-    width: 103%;
-    border-radius: 20px;
-    background-image: linear-gradient(to bottom left, #F5BD5D, #A1A1A1);
     z-index: -1;
+    width: 103%;
+    height: 105%;
+    background-image: linear-gradient(to bottom left, #F5BD5D, #A1A1A1);
+    border-radius: 20px;
 }
 
 .navigation a li:hover{
@@ -117,7 +117,7 @@ html {
 .random img {
     width: 100%;
     max-width: 300px;
-    margin: 20px; 
+    margin: 20px;
 }
 
 ::-webkit-scrollbar {
@@ -134,22 +134,20 @@ html {
 } 
 
 .footer {
-    position: relative;
-    margin-top: auto;
-    width: 100%;
-    height: 100px;
-    background-color: #151515;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: auto;
+    background-color: #151515;
     border-top: 4px solid #282A3A;
 }
 
 .footer p {
+    padding: 2px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #EEEEEE;
-    padding: 2px;
 }
