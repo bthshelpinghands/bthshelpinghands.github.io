@@ -4,6 +4,8 @@ let currentSlide = 1
 
 let slideBtnOne = document.getElementById("slide-btn-one")
 let slideBtnTwo = document.getElementById("slide-btn-two")
+slideBtnOne.style.backgroundColor = "#EEEEEE"
+slideBtnTwo.style.backgroundColor = "#282A3A"
 slideBtnOne.addEventListener("click", slideOne)
 slideBtnTwo.addEventListener("click", slideTwo)
 
