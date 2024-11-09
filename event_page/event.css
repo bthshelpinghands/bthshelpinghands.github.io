@@ -1,10 +1,14 @@
 .event-heading {
     margin-top: 1%;
     padding-top: 15px;
-    font-size: 52px;
+    font-size: 80px;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    color: #EEEEEE;
+    color: #FFFFFF;
     text-align: center;
+}
+
+.past-event-heading {
+    font-size: 40px;
 }
 
 .event-container {
@@ -12,6 +16,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.bg-image {
+    filter: blur(22px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.2;
+    transform: translateY(-4%);
+    width: 100%;
+    height: auto;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.bg-image:nth-child(2) {
+    opacity: 0;
 }
 
 .slideshow-container {
@@ -22,7 +45,7 @@
     width: 80%;
     min-width: 1800px;
     max-width: 2600px;
-    height: 700px;
+    height: 800px;
 }
 
 .event {
@@ -278,7 +301,7 @@
     height: 0px;
     margin-top: 20px;
     margin-left: 20px;
-    transition: width 0.5s ease;
+    transition: height 0.5s ease;
     border-radius: 10px;
 }
 

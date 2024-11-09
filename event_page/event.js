@@ -11,6 +11,12 @@ let slideshowContainer = document.getElementById("slideshow-container")
 let eventOne = document.getElementById("event-one")
 let eventTwo = document.getElementById("event-two")
 
+let bgImageOne = document.getElementById("bg-image-one")
+let bgImageTwo = document.getElementById("bg-image-two")
+
+bgImageOne.style.opacity = 0.2
+bgImageTwo.style.opacity = 0
+
 startSlideshow()
 
 function autoSlide() {
@@ -40,6 +46,8 @@ function slideOne() {
     if (eventOne.style.transform != "translate(0%)") {
         eventOne.style.transform = "translate(0%)"
         eventTwo.style.transform = "translate(100%)"
+        bgImageOne.style.opacity = 0.2
+        bgImageTwo.style.opacity = 0
     }
     slideBtnOne.style.backgroundColor = "#EEEEEE"
     slideBtnTwo.style.backgroundColor = "#282A3A"
@@ -54,6 +62,8 @@ function slideTwo() {
     if (eventTwo.style.transform != "translate(0%)") {
         eventOne.style.transform = "translate(-100%)"
         eventTwo.style.transform = "translate(0%)"
+        bgImageOne.style.opacity = 0
+        bgImageTwo.style.opacity = 0.2
     }
     slideBtnOne.style.backgroundColor = "#282A3A"
     slideBtnTwo.style.backgroundColor = "#EEEEEE"
