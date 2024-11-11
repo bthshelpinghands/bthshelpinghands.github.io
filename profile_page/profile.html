@@ -32,14 +32,50 @@
 
     <div class="profile-container">
         <div class="point-container">
-            <h1 class="profile-heading">Hello Name</h1>
+            <h1 class="profile-heading">Hello, Name</h1>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">2</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">4</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">6</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">8</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">10</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">12</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">Credits</p>
+            </div>
+
             <div class="point-chart">
-                <div class="bar" id="point-bar">
-                    <p class="bar-text" id="point-bar-text"></p>
+                <div class="bar-container">
+                    <div class="bar" id="point-bar">
+                        <p class="bar-num" id="point-bar-text"></p>
+                    </div>
+                    <p class="bar-text">Points</p>
                 </div>
-                <div class="bar" id="hour-bar">
-                    <p class="bar-text" id="hour-bar-text"></p>
-                </div>
+
+                <div class="bar-container">
+                    <div class="bar" id="hour-bar">
+                        <p class="bar-num" id="hour-bar-text"></p>
+                    </div>
+                    <p class="bar-text">Hours</p>
+                </div>   
             </div>
         </div>
 
@@ -58,42 +94,8 @@
                         <th>Attendence</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Helping Hands Driveby</td>
-                        <td>12/25/24 at 4:00pm</td>
-                        <td>+16 points</td>
-                        <td>+3 hours</td>
-                        <td>Present - On time</td>
-                    </tr>
-                    <tr>
-                        <td>Helping Hands Driveby</td>
-                        <td>12/25/24 at 4:00pm</td>
-                        <td>+16 points</td>
-                        <td>+3 hours</td>
-                        <td>Present - On time</td>
-                    </tr>
-                    <tr>
-                        <td>Helping Hands Driveby</td>
-                        <td>12/25/24 at 4:00pm</td>
-                        <td>+16 points</td>
-                        <td>+3 hours</td>
-                        <td>Present - On time</td>
-                    </tr>
-                    <tr>
-                        <td>Helping Hands Driveby</td>
-                        <td>12/25/24 at 4:00pm</td>
-                        <td>+16 points</td>
-                        <td>+3 hours</td>
-                        <td>Present - On time</td>
-                    </tr>
-                    <tr>
-                        <td>Helping Hands Driveby</td>
-                        <td>12/25/24 at 4:00pm</td>
-                        <td>+16 points</td>
-                        <td>+3 hours</td>
-                        <td>Present - On time</td>
-                    </tr>
+                <tbody id="event-log-chart">
+                    
                 </tbody>
             </table>
         </div>
