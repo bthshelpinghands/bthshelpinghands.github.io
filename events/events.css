@@ -323,3 +323,69 @@
 .past-event:hover .past-event-image {
     opacity: 1;
 }
+
+@media screen and (max-width: 1024px) {
+    .slideshow-container {
+        width: 80%;
+    }
+    .event {
+        min-width: 800px;
+        max-width: 1600px;
+    }
+    .event img {
+        width: 40%;
+        min-width: 250px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        width: 90%;
+    }
+    .event {
+        min-width: 600px;
+        max-width: 1400px;
+    }
+    .event img {
+        width: 50%;
+        min-width: 200px;
+        max-width: 500px;
+    }
+    .event-heading {
+        font-size: 3.5rem;
+    }
+    .past-event-title p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slideshow-container {
+        width: 95%;
+    }
+    .event {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    .event img {
+        width: 70%;
+        min-width: 150px;
+        max-width: 400px;
+    }
+    .event-heading {
+        font-size: 2.5rem;
+    }
+    .event-text-container {
+        width: 100%;
+    }
+    .past-event {
+        min-width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .past-event-title p {
+        font-size: 1.2em;
+    }
+}
+
