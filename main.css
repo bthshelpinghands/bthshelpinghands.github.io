@@ -14,7 +14,7 @@ html {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom left, #050505, #1E1E1E);
+    background-color: #101010;
     background-attachment: fixed;
 }
 
