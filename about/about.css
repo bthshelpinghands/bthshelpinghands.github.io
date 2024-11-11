@@ -56,6 +56,12 @@
     border-radius: 20px;
     margin-bottom: 40px;
     box-shadow: 0 0 40px rgba(245, 189, 93, 0.1);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.team-section .container .team-card .card:hover {
+    transform: translateY(-15px);
 }
 
 .team-section .container .team-card .card .image-section img {
