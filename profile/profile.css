@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     width: 60%;
+    position: relative;
+    height: 590px;
 }
 
 .profile-heading {
@@ -30,6 +32,7 @@
     background-color: transparent;
     border-bottom: solid #FFFFFF 4px;
     border-left: solid #FFFFFF 4px;
+    position: relative;
 }
 
 :root {
@@ -41,7 +44,7 @@
     0% {
         width: 0%;
     }
-100% {
+    100% {
         width: var(--pointBarPercentage);
     }
 }
@@ -50,9 +53,16 @@
     0% {
         width: 0%;
     }
-100% {
+    100% {
         width: var(--hourBarPercentage);
     }
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    z-index: 1;
 }
 
 .bar {
@@ -60,18 +70,19 @@
     justify-content: right;
     align-items: center;
     width: 0%;
-    height: 100px;
+    height: 84px;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 4px;
     animation: 1s ease-out 0s 1 pointSlideIn;
     background-color: #F5BD5D;
+    box-shadow: 0 0 40px rgba(245, 189, 93, 0.3);
 }
 
-.bar:nth-child(2) {
+#hour-bar {
     animation: 1s ease-out 0s 1 hourSlideIn;
 }
 
-.bar-text {
+.bar-num {
     margin: 30px;
     font-size: 28px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -79,13 +90,69 @@
     color: #FFFFFF;
 }
 
-.bar-x-axis {
-    margin-left: 4px;
+.bar-text {
     font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: lighter;
-    color: #282A3A;
+    color: #FFFFFF;
+    margin-bottom: 18px;
+    margin-left: 4px;
 }
+
+.bg {
+    width: 15%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: left;
+    align-items:end;
+}
+
+.bg:nth-child(2) {
+    transform: translate(100%);
+}
+
+.bg:nth-child(3) {
+    transform: translate(200%);
+}
+
+.bg:nth-child(4) {
+    transform: translate(300%);
+}
+
+.bg:nth-child(5) {
+    transform: translate(400%);
+}
+
+.bg:nth-child(6) {
+    transform: translate(500%);
+}
+
+.bg:nth-child(7) {
+    transform: translate(600%);
+}
+
+.bg:nth-child(7) .line {
+    border-right: none;
+}
+
+.line {
+    width: 10px;
+    height: 92%;
+    position: absolute;
+    top:0;
+    right: 0;
+    border-right: solid #282A3A 2px;
+}
+
+.x-axis-text {
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #FFFFFF;
+}
+
 
 .event-log-container {
     display: flex;
@@ -143,4 +210,83 @@ table tbody tr:last-child {
 
 table tbody tr:nth-of-type(even) {
     background-color: #151515;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile-heading {
+        font-size: 3rem;
+    }
+    .point-container, .event-log-container {
+        width: 80%;
+    }
+    .bar {
+        height: 60px;
+    }
+    .bar-num {
+        font-size: 20px;
+    }
+    .event-log-heading-text {
+        font-size: 2rem;
+    }
+    table {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .point-container, .event-log-container {
+        width: 90%;
+    }
+    .bar {
+        height: 50px;
+    }
+    .bar-num {
+        font-size: 18px;
+    }
+    .bar-text {
+        font-size: 12px;
+    }
+    .event-log-heading-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    table {
+        font-size: 16px;
+    }
+    table thead tr th, table tbody tr td {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .point-container, .event-log-container {
+        width: 95%;
+    }
+    .bar {
+        height: 40px;
+    }
+    .bar-num {
+        font-size: 16px;
+    }
+    .bar-text {
+        font-size: 10px;
+    }
+    .event-log-heading-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    table {
+        font-size: 14px;
+    }
+    table thead tr th, table tbody tr td {
+        padding: 10px;
+    }
 }
