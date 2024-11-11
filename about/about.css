@@ -14,92 +14,125 @@
 
 .team-section .container .row .title {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 3rem;
 }
 
 .team-section .container .row .title h1 {
-    font-size: 80px;
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-family: "M PLUS Rounded 1c", sans-serif;
     color: #FFFFFF;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
 
 .team-section .container .row .title p {
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-family: sans-serif;
-    margin: 30px 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 2rem 0;
+    font-family: "M PLUS Rounded 1c", sans-serif;
     color: #EEEEEE;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .team-section .container .team-card {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px;
-    margin-top: 50px;
+    grid-gap: 5rem;
+    margin-top: 3rem;
 }
 
 .team-section .container .team-card .card {
     width: 80%;
     height: 80%;
     opacity: 1;
-    background-color: #000000;
+    background-color: #151515;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 30px;
-    cursor: pointer;
+    padding: 2rem;
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 0 40px rgba(245, 189, 93, 0.1);
 }
 
 .team-section .container .team-card .card .image-section img {
-    height: 150px;
-    width: 150px;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
-    border: 6px solid #ebdb81;
+    border: 6px solid #F5BD5D;
 }
 
 .team-section .container .team-card .card .content {
     width: 100%;
-    text-align: center;    
+    text-align: center;
 }
 
 .team-section .container .team-card .card .content h3 {
-    font-size: 27px;
-    margin-top: 10px;
+    font-size: 2rem;
+    margin-top: 1rem;
     letter-spacing: 1.5px;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    color: #f0e990;
+    color: #F5BD5D;
 }
 
 .team-section .container .team-card .card .content h4 {
-    font-size: 17px;
-    margin-top: 10px;
+    font-size: 1.3rem;
+    margin-top: 1rem;
     letter-spacing: 1.5px;
     font-family: "M PLUS Rounded 1c", sans-serif;
     color: #ffffff;
 }
 
 .team-section .container .team-card .card .content p {
-    font-size: 15px;
-    margin: 16px 0px;
+    font-size: 1.2rem;
+    margin: 1rem 0;
     line-height: 1.5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif;
     color: #ffffff;
 }
 
 @media screen and (max-width: 900px) {
     .team-section .container .team-card {
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .team-section .container .team-card {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    .team-section .container .row .title h1 {
+        font-size: 3rem;
+    }
+
+    .team-section .container .row .title p {
+        font-size: 1.1em;
+    }
+
+    .team-section .container .team-card .card {
+        padding: 1.5rem;
+    }
+
+    .team-section .container .team-card .card .image-section img {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .team-section .container .team-card .card .content h3 {
+        font-size: 1.8rem;
+    }
+
+    .team-section .container .team-card .card .content h4 {
+        font-size: 1.2rem;
+    }
+
+    .team-section .container .team-card .card .content p {
+        font-size: 1rem;
     }
 }
