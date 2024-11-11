@@ -211,3 +211,82 @@ table tbody tr:last-child {
 table tbody tr:nth-of-type(even) {
     background-color: #151515;
 }
+
+@media screen and (max-width: 1024px) {
+    .profile-heading {
+        font-size: 3rem;
+    }
+    .point-container, .event-log-container {
+        width: 80%;
+    }
+    .bar {
+        height: 60px;
+    }
+    .bar-num {
+        font-size: 20px;
+    }
+    .event-log-heading-text {
+        font-size: 2rem;
+    }
+    table {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-heading {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .point-container, .event-log-container {
+        width: 90%;
+    }
+    .bar {
+        height: 50px;
+    }
+    .bar-num {
+        font-size: 18px;
+    }
+    .bar-text {
+        font-size: 12px;
+    }
+    .event-log-heading-text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    table {
+        font-size: 16px;
+    }
+    table thead tr th, table tbody tr td {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .point-container, .event-log-container {
+        width: 95%;
+    }
+    .bar {
+        height: 40px;
+    }
+    .bar-num {
+        font-size: 16px;
+    }
+    .bar-text {
+        font-size: 10px;
+    }
+    .event-log-heading-text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    table {
+        font-size: 14px;
+    }
+    table thead tr th, table tbody tr td {
+        padding: 10px;
+    }
+}
