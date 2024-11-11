@@ -152,7 +152,7 @@ html {
     }
 
     .header {
-        height: 4.5rem;
+        height: 4rem;
     }
 
     .logo-container {
@@ -160,21 +160,21 @@ html {
     }
 
     .logo-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .navigation a li {
         width: auto;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
     }
 
     .random img {
-        max-width: 75%;
+        max-width: 60%;
     }
 
     .footer {
-        height: 4.5rem;
+        height: 4rem;
     }
 }
 
@@ -184,27 +184,27 @@ html {
     }
 
     .header {
-        height: 5rem;
+        height: 4.5rem;
     }
 
     .logo-container {
-        width: 30rem;
+        width: 25rem;
     }
 
     .logo-text h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .navigation a li {
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 
     .random img {
-        max-width: 85%;
+        max-width: 70%;
     }
 
     .footer {
-        height: 5rem;
+        height: 4.5rem;
     }
 }
 
