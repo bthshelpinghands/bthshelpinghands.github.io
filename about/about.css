@@ -23,14 +23,16 @@
     letter-spacing: 1.5px;
     font-family: "M PLUS Rounded 1c", sans-serif;
     color: #FFFFFF;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .team-section .container .row .title p {
     font-size: 1.6em;
     font-family: sans-serif;
     margin: 30px 0px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif;
     color: #EEEEEE;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .team-section .container .team-card {
@@ -45,22 +47,22 @@
     width: 80%;
     height: 80%;
     opacity: 1;
-    background-color: #000000;
+    background-color: #151515;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 30px;
-    cursor: pointer;
     border-radius: 20px;
     margin-bottom: 40px;
+    box-shadow: 0 0 40px rgba(245, 189, 93, 0.1);
 }
 
 .team-section .container .team-card .card .image-section img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    border: 6px solid #ebdb81;
+    border: 6px solid #F5BD5D;
 }
 
 .team-section .container .team-card .card .content {
@@ -73,7 +75,7 @@
     margin-top: 10px;
     letter-spacing: 1.5px;
     font-family: "M PLUS Rounded 1c", sans-serif;
-    color: #f0e990;
+    color: #F5BD5D;
 }
 
 .team-section .container .team-card .card .content h4 {
@@ -88,7 +90,7 @@
     font-size: 15px;
     margin: 16px 0px;
     line-height: 1.5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "M PLUS Rounded 1c", sans-serif;
     color: #ffffff;
 }
 
