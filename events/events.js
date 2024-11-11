@@ -69,33 +69,9 @@ function slideTwo() {
     }
     slideBtnOne.style.backgroundColor = "#282A3A"
     slideBtnTwo.style.backgroundColor = "#EEEEEE"
-
+ 
     if (slideInterval) {
         stopSlideshow()
         startSlideshow()
     }
 }
-
-window.addEventListener("resize", function() {
-    let screenWidth = window.innerWidth;
-
-    if (screenWidth <= 768) {
-        document.querySelectorAll("img").forEach(img => {
-            img.style.width = "80%";
-            img.style.transition = "all 0.5s ease";
-        });
-        slideDelay = 3000;
-    } else {
-        document.querySelectorAll("img").forEach(img => {
-            img.style.width = "34%";
-            img.style.transition = "all 0.8s ease";
-        });
-        slideDelay = 4500;
-    }
-
-    if (screenWidth <= 480) {
-        slideshowContainer.style.width = "90%";
-    } else {
-        slideshowContainer.style.width = "100%";
-    }
-});
