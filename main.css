@@ -4,6 +4,7 @@
 }
 
 html {
+    font-size: 16px;
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
@@ -22,9 +23,9 @@ html {
     z-index: 100;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 6rem;
     background-color: #151515;
-    border-bottom: 4px solid #282A3A;
+    border-bottom: 0.25rem solid #282A3A;
     color: #EEEEEE;
 }
 
@@ -40,13 +41,13 @@ html {
 .logo-container {
     display: flex;
     align-items: center;
-    width: 550px;
+    width: 34.375rem;
     height: 100%;
 }
 
 .logo-container img {
-    height: 80px;
-    margin-right: 5px;
+    height: 5rem;
+    margin-right: 0.3125rem;
 }
 
 .logo-text {
@@ -56,7 +57,7 @@ html {
 }
 
 .logo-text h1 {
-    font-size: 55px;
+    font-size: 3.4375rem;
     font-family: "M PLUS Rounded 1c", sans-serif;
     color: #EEEEEE;
 }
@@ -71,8 +72,7 @@ html {
     display: flex;
     align-items: center;
     height: 50%;
-    max-width: 500px;
-    padding: 0px 10px;
+    padding: 0 0.625rem;
     color: inherit;
     text-decoration: none;
 }
@@ -85,20 +85,20 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: 6.25rem;
     height: 100%;
     background-color: #151515;
     background-image: linear-gradient(#151515, #151515), linear-gradient(to bottom left, #F5BD5D, #A1A1A1);
     background-clip: content-box, border-box;
     background-origin: border-box;
-    border: double transparent 3px;
-    border-radius: 20px;
-    font-size: 20px;
+    border: double transparent 0.1875rem;
+    border-radius: 1.25rem;
+    font-size: 1.25rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-.navigation a li:hover{
+.navigation a li:hover {
     background-image: linear-gradient(to bottom left, #F5BD5D, #A1A1A1);
 }
 
@@ -110,12 +110,12 @@ html {
 
 .random img {
     width: 100%;
-    max-width: 300px;
-    margin: 20px;
+    max-width: 18.75rem;
+    margin: 1.25rem;
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 0.25rem;
 }
   
 ::-webkit-scrollbar-track {
@@ -124,8 +124,8 @@ html {
   
 ::-webkit-scrollbar-thumb {
     background: #ABABAB;
-    border-radius: 4px;
-} 
+    border-radius: 0.25rem;
+}
 
 .footer {
     display: flex;
@@ -134,14 +134,106 @@ html {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
     margin-top: auto;
     background-color: #151515;
-    border-top: 4px solid #282A3A;
+    border-top: 0.25rem solid #282A3A;
 }
 
 .footer p {
-    padding: 2px;
+    padding: 0.125rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #EEEEEE;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    .header {
+        height: 5rem;
+    }
+
+    .logo-container {
+        width: 100%;
+    }
+
+    .logo-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .navigation a li {
+        width: auto;
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .random img {
+        max-width: 80%;
+    }
+
+    .footer {
+        height: 5rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header {
+        height: 5.5rem;
+    }
+
+    .logo-container {
+        width: 35rem;
+    }
+
+    .logo-text h1 {
+        font-size: 3rem;
+    }
+
+    .navigation a li {
+        font-size: 1.125rem;
+    }
+
+    .random img {
+        max-width: 90%;
+    }
+
+    .footer {
+        height: 6rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    html {
+        font-size: 16px;
+    }
+
+    .header {
+        height: 6rem;
+    }
+
+    .logo-container {
+        width: 34.375rem;
+    }
+
+    .logo-text h1 {
+        font-size: 3.4375rem;
+    }
+
+    .navigation a li {
+        font-size: 1.25rem;
+    }
+
+    .random img {
+        max-width: 18.75rem;
+    }
+
+    .footer {
+        height: 6.25rem;
+    }
 }
