@@ -1,24 +1,22 @@
-let points = 0
-let hours = 0
+import { getStudentTotal, getStudentAllEventsAttended } from "../modules/StudentInfoRetrieval.js"
+const studentTotalInfo = getStudentTotal(111111111);
+let points = studentTotalInfo.totalPoints;
+let hours = studentTotalInfo.totalHours;
 
 let eventLogChart = document.getElementById("event-log-chart")
-let eventLogList = [["Helping Hands Driveby", "12/25/24 at 4:00pm", "+16 points", "+3 hours", "Present - On time"],
- ["Helping Hands Driveby", "12/25/24 at 4:00pm", "+16 points", "+3 hours", "Present - On time"], 
- ["Helping Hands Driveby", "12/25/24 at 4:00pm", "+16 points", "+3 hours", "Present - On time"], 
- ["Helping Hands Driveby", "12/25/24 at 4:00pm", "+16 points", "+3 hours", "Present - On time"],]
+let eventLogList = getStudentAllEventsAttended(111111111);
 
  for (const event of eventLogList) {
     let newRow = document.createElement("tr")
-    for (const detail of event) {
+    for (const value of Object.values(event)) {
+        console.log(value);
         let newData = document.createElement("td")
-        newData.innerHTML = detail
-        
-        if (detail.includes("points")) {
-            points = points + parseInt(detail.substring(0,3))
-        } else if (detail.includes("hours")) {
-            hours = hours + parseInt(detail.substring(0,3))
-        }
-
+        newData.innerHTML = value;
+        // if (detail.includes("points")) {
+        //     points = points + parseInt(detail.substring(0,3))
+        // } else if (detail.includes("hours")) {
+        //     hours = hours + parseInt(detail.substring(0,3))
+        // }
         newRow.appendChild(newData)
     }
     eventLogChart.appendChild(newRow)
