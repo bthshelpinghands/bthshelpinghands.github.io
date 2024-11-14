@@ -39,6 +39,7 @@ const getStudentEventAttendedData = (osis, event) => {
 }
 
 export {  
+    studentInfo,
     basicAuthentication, 
     getStudentAllEventsAttended, 
     getStudentEventAttendedData, 
