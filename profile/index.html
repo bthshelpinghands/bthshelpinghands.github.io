@@ -16,20 +16,20 @@
     <script type="module" src="../modules/StudentInfoRetrieval.js"></script> 
 </head> 
 <body class="body-gradient">
-    <div class="header">
+    <div class="header" id="header">
         <div class="inner-header">
             <div class="logo-container">
-                <img src="/static_assets/logo.png" alt="logo" alt="BTHS HELPING HANDS CLUB LOGO">
+                <img src="/static_assets/logo.png" alt="logo" id="logo-img">
                 <div class="logo-text">
-                    <h1>Helping Hands</h1>
+                    <h1 id="logo-text">Helping Hands</h1>
                 </div>
             </div>
 
-            <ul class="navigation">
-                <a href="/home"><li>Home</li></a>
-                <a href="/events"><li>Events</li></a>
-                <a href="/profile"><li>Profile</li></a>
-                <a href="/about"><li>About Us</li></a>
+            <ul class="navigation" id="navigation">
+                <a href="/home"><li class="nav-btn">Home</li></a>
+                <a href="/events"><li class="nav-btn">Events</li></a>
+                <a href="/profile"><li class="nav-btn">Profile</li></a>
+                <a href="/about"><li class="nav-btn">About Us</li></a>
             </ul>
         </div>
     </div>
@@ -105,6 +105,7 @@
         </div>
     </div>
     <script type="module" src="profile.js"></script>
+    <script src="/updateHeader.js"></script>
 </body>
 <footer>
     <div class="social-icons">
