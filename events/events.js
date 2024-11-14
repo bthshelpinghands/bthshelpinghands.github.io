@@ -26,10 +26,7 @@ createUpcomingEvents()
 setSlideAnimation()
 startSlideshow()
 
-let pastEventsData = [
-    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"], 
-    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"]
-]
+const pastEventsData = allEventsData.slice(0, allEventsData.length - 2);
 let pastEventsContainer = document.getElementById("past-event-container")
 
 createPastEvents();
