@@ -2,7 +2,10 @@ let slideInterval
 let slideDelay = 4500
 let currentSlideIndex = 1
 
-let upcomingEventsData = [["/static_assets/tree.jpg", "Slide 1", "Description: Lorem ipsum dolor sit amet"], ["/static_assets/cat2.jpg", "Slide 2", "Description: Lorem ipsum dolor sit amet"]]
+let upcomingEventsData = [
+    ["/static_assets/placeHolders/tree.jpg", "Slide 1", "Description: Lorem ipsum dolor sit amet"], 
+    ["/static_assets/placeHolders/cat2.jpg", "Slide 2", "Description: Lorem ipsum dolor sit amet"]
+]
 let eventContainer = document.getElementById("event-container")
 let slideshowContainer = document.getElementById("slideshow-container")
 let slideBtnContainer = document.getElementById("slide-buttons")
@@ -15,7 +18,10 @@ createUpcomingEvents()
 setSlideAnimation()
 startSlideshow()
 
-let pastEventsData = [["Hello", "hello", "/static_assets/tree.jpg"], ["Hello", "hello", "/static_assets/tree.jpg"]]
+let pastEventsData = [
+    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"], 
+    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"]
+]
 let pastEventsContainer = document.getElementById("past-event-container")
 
 createPastEvents()
