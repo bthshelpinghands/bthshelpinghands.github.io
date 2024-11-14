@@ -22,12 +22,15 @@ let bgImages = [];
 let upcomingEvents = [];
 let slideBtns = [];
 
-createUpcomingEvents();
-setSlideAnimation();
-startSlideshow();
+createUpcomingEvents()
+setSlideAnimation()
+startSlideshow()
 
-const pastEventsData = allEventsData.slice(0, allEventsData.length - 2);
-let pastEventsContainer = document.getElementById("past-event-container");
+let pastEventsData = [
+    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"], 
+    ["Hello", "hello", "/static_assets/placeHolders/tree.jpg"]
+]
+let pastEventsContainer = document.getElementById("past-event-container")
 
 createPastEvents();
 
