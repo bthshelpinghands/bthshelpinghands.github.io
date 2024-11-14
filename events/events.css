@@ -23,17 +23,14 @@
 .bg-image {
     filter: blur(22px);
     position: absolute;
+    z-index: -1;
     bottom: 0;
     left: 0;
     opacity: 0.2;
-    transform: translateY(-4%);
+    transform: translateY(-6%);
     width: 100%;
     height: auto;
     transition: opacity 0.8s ease-in-out;
-}
-
-.bg-image:nth-child(2) {
-    opacity: 0;
 }
 
 .slideshow-container {

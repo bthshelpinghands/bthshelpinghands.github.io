@@ -1,33 +1,102 @@
 let slideInterval
-const slideDelay = 4500
-let currentSlide = 1
+let slideDelay = 4500
+let currentSlideIndex = 1
 
-let slideBtnOne = document.getElementById("slide-btn-one")
-let slideBtnTwo = document.getElementById("slide-btn-two")
-slideBtnOne.style.backgroundColor = "#EEEEEE"
-slideBtnTwo.style.backgroundColor = "#282A3A"
-slideBtnOne.addEventListener("click", slideOne)
-slideBtnTwo.addEventListener("click", slideTwo)
-
+let upcomingEventsData = [["/static_assets/tree.jpg", "Slide 1", "Description: Lorem ipsum dolor sit amet"], ["/static_assets/cat2.jpg", "Slide 2", "Description: Lorem ipsum dolor sit amet"]]
+let eventContainer = document.getElementById("event-container")
 let slideshowContainer = document.getElementById("slideshow-container")
-let eventOne = document.getElementById("event-one")
-let eventTwo = document.getElementById("event-two")
+let slideBtnContainer = document.getElementById("slide-buttons")
 
-let bgImageOne = document.getElementById("bg-image-one")
-let bgImageTwo = document.getElementById("bg-image-two")
+let bgImages = []
+let upcomingEvents = []
+let slideBtns = []
 
-bgImageOne.style.opacity = 0.2
-bgImageTwo.style.opacity = 0
-
+createUpcomingEvents()
+setSlideAnimation()
 startSlideshow()
 
+let pastEventsData = [["Hello", "hello", "/static_assets/tree.jpg"], ["Hello", "hello", "/static_assets/tree.jpg"]]
+let pastEventsContainer = document.getElementById("past-event-container")
+
+createPastEvents()
+
+function createElement(type, className, parent) {
+    let element = document.createElement(type)
+    if (className) element.className = className
+    if (parent) parent.appendChild(element)
+    return element
+}
+
+function createTextElement(type, text, className, parent) {
+    let element = createElement(type, className, parent)
+    element.innerHTML = text
+    return element
+}
+
+function createUpcomingEvents() {
+    upcomingEventsData.forEach(([imageSrc, title, description], index) => {
+        let bgImage = createElement("img", "bg-image", eventContainer)
+        bgImage.src = imageSrc
+        bgImages.push(bgImage)
+
+        let event = createElement("div", "event", slideshowContainer)
+        upcomingEvents.push(event)
+
+        let eventImg = createElement("img", "image-left", event)
+        eventImg.src = imageSrc
+
+        let eventInfo = createElement("div", "event-info", event)
+        let textContainer = createElement("div", "event-text-container info-left", eventInfo)
+        let eventText = createElement("div", "event-text", textContainer)
+
+        createTextElement("h1", title, null, eventText)
+        createTextElement("p", description, null, eventText)
+        createTextElement("button", "Sign Up", "sign-up sign-up-left", eventInfo)
+
+        let slideBtn = createElement("a", null, slideBtnContainer)
+        slideBtns.push(slideBtn)
+    })
+}
+
+function createPastEvents() {
+    pastEventsData.forEach(([title, description, imageSrc]) => {
+        let pastEvent = createElement("div", "past-event", pastEventsContainer)
+        
+        let titleContainer = createElement("div", "past-event-title", pastEvent)
+        createTextElement("p", title, null, titleContainer)
+
+        let arrowBtn = createElement("div", "arrow-button", pastEvent)
+        createElement("div", "arrow", arrowBtn)
+
+        let textContainer = createElement("div", "past-event-text", pastEvent)
+        createTextElement("p", description, null, textContainer)
+
+        let imageContainer = createElement("div", "past-event-image-container", pastEvent)
+        let image = createElement("img", "past-event-image", imageContainer)
+        image.src = imageSrc
+    })
+}
+
+function setSlideAnimation() {
+    slideBtns[1].style.backgroundColor = "#282A3A"
+    slideBtns[0].style.backgroundColor = "#EEEEEE"
+
+    slideBtns[0].addEventListener("click", slideOne)
+    slideBtns[1].addEventListener("click", slideTwo)
+
+
+    bgImages[0].style.opacity = 0.2
+    bgImages[1].style.opacity = 0
+}
+
+
 function autoSlide() {
-    if (currentSlide == 1) {
+    if (currentSlideIndex == 1) {
         slideTwo()
-        currentSlide = 2
+        currentSlideIndex = 2
     } else {
         slideOne()
-        currentSlide = 1
+        currentSlideIndex = 1
     }
 }
 
@@ -45,14 +114,14 @@ function stopSlideshow() {
 }
 
 function slideOne() {
-    if (eventOne.style.transform != "translate(0%)") {
-        eventOne.style.transform = "translate(0%)"
-        eventTwo.style.transform = "translate(100%)"
-        bgImageOne.style.opacity = 0.2
-        bgImageTwo.style.opacity = 0
+    if (upcomingEvents[0].style.transform != "translate(0%)") {
+        upcomingEvents[0].style.transform = "translate(0%)"
+        upcomingEvents[1].style.transform = "translate(100%)"
+        bgImages[0].style.opacity = 0.2
+        bgImages[1].style.opacity = 0
     }
-    slideBtnOne.style.backgroundColor = "#EEEEEE"
-    slideBtnTwo.style.backgroundColor = "#282A3A"
+    slideBtns[0].style.backgroundColor = "#EEEEEE"
+    slideBtns[1].style.backgroundColor = "#282A3A"
 
     if (slideInterval) {
         stopSlideshow()
@@ -61,14 +130,14 @@ function slideOne() {
 }
 
 function slideTwo() {
-    if (eventTwo.style.transform != "translate(0%)") {
-        eventOne.style.transform = "translate(-100%)"
-        eventTwo.style.transform = "translate(0%)"
-        bgImageOne.style.opacity = 0
-        bgImageTwo.style.opacity = 0.2
+    if (upcomingEvents[1].style.transform != "translate(0%)") {
+        upcomingEvents[0].style.transform = "translate(-100%)"
+        upcomingEvents[1].style.transform = "translate(0%)"
+        bgImages[0].style.opacity = 0
+        bgImages[1].style.opacity = 0.2
     }
-    slideBtnOne.style.backgroundColor = "#282A3A"
-    slideBtnTwo.style.backgroundColor = "#EEEEEE"
+    slideBtns[0].style.backgroundColor = "#282A3A"
+    slideBtns[1].style.backgroundColor = "#EEEEEE"
  
     if (slideInterval) {
         stopSlideshow()
