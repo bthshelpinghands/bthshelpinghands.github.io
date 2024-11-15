@@ -61,17 +61,21 @@ function createUpcomingEvents() {
 function createPastEvents() {
     pastEventsData.forEach(([title, description, imageSrc]) => {
         let pastEvent = createElement("div", "past-event", pastEventsContainer)
+
+        let topRow = createElement("div", "past-event-row", pastEvent)
         
-        let titleContainer = createElement("div", "past-event-title", pastEvent)
+        let titleContainer = createElement("div", "past-event-title", topRow)
         createTextElement("p", title, null, titleContainer)
 
-        let arrowBtn = createElement("div", "arrow-button", pastEvent)
+        let arrowBtn = createElement("div", "arrow-button", topRow)
         createElement("div", "arrow", arrowBtn)
 
-        let textContainer = createElement("div", "past-event-text", pastEvent)
+        let bottomRow = createElement("div", "past-event-row", pastEvent)
+
+        let textContainer = createElement("div", "past-event-text", bottomRow)
         createTextElement("p", description, null, textContainer)
 
-        let imageContainer = createElement("div", "past-event-image-container", pastEvent)
+        let imageContainer = createElement("div", "past-event-image-container", bottomRow)
         let image = createElement("img", "past-event-image", imageContainer)
         image.src = imageSrc
     })
