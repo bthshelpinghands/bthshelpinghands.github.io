@@ -19,7 +19,7 @@ html {
 }
 
 .header {
-    position: sticky;
+    position: fixed;
     z-index: 100;
     top: 0;
     width: 100%;
@@ -166,13 +166,13 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 48px;
+    height: 42px;
     width: 190px;
 }
 
 .social-icon {
-    height: 44px;
-    width: 44px;
+    height: 40px;
+    width: 40px;
     background-color: #F5BD5D;
     display: flex;
     justify-content: center;
@@ -217,4 +217,28 @@ footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:#EEEEEE;
     font-size: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        height: 4.5rem;
+    }
+
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo-container img {
+        height: 3.5rem;
+    }
+
+    .nav-btn {
+        height: 8px;
+        width: 8px;
+        font-size: 2px;
+    }
+
+    .footer-nav {
+        margin: 0px;
+    }
 }
