@@ -1,0 +1,66 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url("/static_assets/group.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section {
+    width: 100%;
+    padding: 0px 80px;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 650px;
+    position: absolute;
+    top: 0;
+    left: 80;
+    padding-top: 225px;
+}
+
+.content .title {
+    font-size: 75px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.content .button {
+    text-decoration: none;
+    margin-top: 35px;
+    font-size: 19px;
+    font-family: sans-serif;
+    padding: 14px 25px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #F5BD5D;
+    letter-spacing: 2px;
+}
+
+.content .button:hover {
+    background-color: #000000;
+    transition: 0.5s ease;
+}
