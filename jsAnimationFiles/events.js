@@ -5,14 +5,7 @@ let slideDelay = 4500;
 let currentSlideIndex = 1;
 
 const allEventsData = getAllEvents();
-// console.log(eventsInfo);
 const upcomingEventsData = allEventsData.slice(allEventsData.length - 2, allEventsData.length);
-// console.log(upcomingEventsData1);
-
-// const upcomingEventsData = [
-//     ["/static_assets/placeHolders/tree.jpg", "Slide 1", "Description: Lorem ipsum dolor sit amet"], 
-//     ["/static_assets/placeHolders/cat2.jpg", "Slide 2", "Description: Lorem ipsum dolor sit amet"]
-// ];
 
 let eventContainer = document.getElementById("event-container");
 let slideshowContainer = document.getElementById("slideshow-container");

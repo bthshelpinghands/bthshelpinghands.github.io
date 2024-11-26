@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<%- include('partials/head.ejs') %>
+    <link rel="stylesheet" href="/cssFiles/events.css">
+    <script type="module" src="../modules/eventData.js"></script>
+    <script type="module" src="../modules/EventRetrieval.js"></script>
+</head>
+<body class="body-gradient">
+    <%- include('partials/navBar.ejs') %>
+    
+    <div class="event-container" id="event-container">
+        <h1 class="event-heading">Upcoming events</h1>
+        <div class="slideshow-container" id="slideshow-container"></div>
+        <div class="slide-buttons" id="slide-buttons"></div>
+    </div>
+    
+    <h1 class="event-heading past-event-heading">Past Events</h1>
+    <div class="past-event-container" id="past-event-container"></div>
+    <%- include('partials/footer.ejs') %>
+    <script type="module" src="../jsAnimationFiles/events.js"></script>
+</body>
+</html>

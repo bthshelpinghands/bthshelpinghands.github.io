@@ -1,4 +1,4 @@
-import { getStudentTotal, getStudentAllEventsAttended } from "../modules/StudentInfoRetrieval.js"
+import { getStudentTotal, getStudentAllEventsAttended } from "../../modules/StudentInfoRetrieval.js"
 const studentTotalInfo = getStudentTotal(111111111);
 let points = studentTotalInfo.totalPoints;
 let hours = studentTotalInfo.totalHours;

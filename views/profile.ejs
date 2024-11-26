@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<%- include('partials/head.ejs'); %>
+    <link rel="stylesheet" href="/cssFiles/profile.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type="module" src="../modules/studentData.js"></script>
+    <script type="module" src="../modules/StudentInfoRetrieval.js"></script> 
+</head> 
+<body class="body-gradient">
+    <%- include('partials/navBar.ejs')%>
+
+    <div class="profile-container">
+        <div class="point-container">
+            <h1 class="profile-heading">Hello, Name</h1>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">2</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">4</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">6</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">8</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">10</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">12</p>
+            </div>
+            <div class="bg">
+                <div class="line"></div>
+                <p class="x-axis-text">Credits</p>
+            </div>
+
+            <div class="point-chart">
+                <div class="bar-container">
+                    <div class="bar" id="point-bar">
+                        <p class="bar-num" id="point-bar-text"></p>
+                    </div>
+                    <p class="bar-text">Points</p>
+                </div>
+
+                <div class="bar-container">
+                    <div class="bar" id="hour-bar">
+                        <p class="bar-num" id="hour-bar-text"></p>
+                    </div>
+                    <p class="bar-text">Hours</p>
+                </div>   
+            </div>
+        </div>
+
+        <div class="event-log-container">
+            <div class="event-log-heading-container">
+                <h1 class="event-log-heading-text">Event Log</h1> 
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date and Time</th>
+                        <th>Points Earned</th>
+                        <th>Hours Earned</th>
+                        <th>Attendence</th>
+                    </tr>
+                </thead>
+                <tbody id="event-log-chart">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <%- include('partials/footer.ejs'); %>
+    <script type="module" src="../jsAnimationFiles/profile.js"></script>
+</body>
+</html>

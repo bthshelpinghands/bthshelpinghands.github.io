@@ -1,4 +1,4 @@
-import { eventsData } from "../db/eventData.js";
+import { eventsData } from "./eventData.js";
 
 const eventsInfo = eventsData.eventList;
 
