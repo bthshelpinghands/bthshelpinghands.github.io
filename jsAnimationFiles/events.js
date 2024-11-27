@@ -1,25 +1,21 @@
-import { eventsInfo, getAllEvents, getSpecificEventData, getSpecificEventPhoto } from "../modules/EventRetrieval.js"
-
 let slideInterval;
 let slideDelay = 4500;
 let currentSlideIndex = 1;
+let upcomingEvents = [];
+const slideBtns = [];
 
-const allEventsData = getAllEvents();
-const upcomingEventsData = allEventsData.slice(allEventsData.length - 2, allEventsData.length);
+const allEventsData = serverData;
+const upcomingEventsData = serverData;
 
 let eventContainer = document.getElementById("event-container");
 let slideshowContainer = document.getElementById("slideshow-container");
 let slideBtnContainer = document.getElementById("slide-buttons");
 
-let bgImages = [];
-let upcomingEvents = [];
-let slideBtns = [];
-
 createUpcomingEvents()
 setSlideAnimation()
 startSlideshow()
 
-const pastEventsData = allEventsData.slice(0, allEventsData.length - 2);
+const pastEventsData = serverData;
 let pastEventsContainer = document.getElementById("past-event-container")
 
 createPastEvents();
@@ -40,15 +36,15 @@ function createTextElement(type, text, className, parent) {
 function createUpcomingEvents() {
     // ([imageSrc, title, description], index)
     upcomingEventsData.forEach( eventData => {
-        let bgImage = createElement("img", "bg-image", eventContainer);
-        bgImage.src = eventData.mainPhotoPath;
-        bgImages.push(bgImage);
+        // let bgImage = createElement("img", "bg-image", eventContainer);
+        // bgImage.src = eventData.mainPhotoPath;
+        // bgImage.push(bgImage);
 
         let event = createElement("div", "event", slideshowContainer);
         upcomingEvents.push(event);
 
         let eventImg = createElement("img", "image-left", event);
-        eventImg.src = eventData.mainPhotoPath;
+        eventImg.src = eventData.coverImage;
 
         let eventInfo = createElement("div", "event-info", event);
         let textContainer = createElement("div", "event-text-container info-left", eventInfo);
@@ -81,9 +77,9 @@ function createPastEvents() {
         let textContainer = createElement("div", "past-event-text", bottomRow);
         createTextElement("p", eventData.description, null, textContainer);
 
-        let imageContainer = createElement("div", "past-event-image-container", bottomRow);
-        let image = createElement("img", "past-event-image", imageContainer);
-        image.src = eventData.mainPhotoPath;
+        // let imageContainer = createElement("div", "past-event-image-container", bottomRow);
+        // let image = createElement("img", "past-event-image", imageContainer);
+        // image.src = eventData.coverImage;
     })
 }
 
@@ -95,8 +91,8 @@ function setSlideAnimation() {
     slideBtns[1].addEventListener("click", slideTwo);
 
 
-    bgImages[0].style.opacity = 0.2;
-    bgImages[1].style.opacity = 0;
+    // bgImages[0].style.opacity = 0.2;
+    // bgImages[1].style.opacity = 0;
 }
 
 
@@ -127,8 +123,8 @@ function slideOne() {
     if (upcomingEvents[0].style.transform != "translate(0%)") {
         upcomingEvents[0].style.transform = "translate(0%)";
         upcomingEvents[1].style.transform = "translate(100%)";
-        bgImages[0].style.opacity = 0.2;
-        bgImages[1].style.opacity = 0;
+        // bgImages[0].style.opacity = 0.2;
+        // bgImages[1].style.opacity = 0;
     }
     slideBtns[0].style.backgroundColor = "#EEEEEE";
     slideBtns[1].style.backgroundColor = "#282A3A";
@@ -143,8 +139,8 @@ function slideTwo() {
     if (upcomingEvents[1].style.transform != "translate(0%)") {
         upcomingEvents[0].style.transform = "translate(-100%)";
         upcomingEvents[1].style.transform = "translate(0%)";
-        bgImages[0].style.opacity = 0;
-        bgImages[1].style.opacity = 0.2;
+        // bgImages[0].style.opacity = 0;
+        // bgImages[1].style.opacity = 0.2;
     }
     slideBtns[0].style.backgroundColor = "#282A3A";
     slideBtns[1].style.backgroundColor = "#EEEEEE";

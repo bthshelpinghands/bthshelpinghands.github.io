@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<%- include('partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
     <link rel="stylesheet" href="/cssFiles/events.css">
-    <script type="module" src="../modules/eventData.js"></script>
-    <script type="module" src="../modules/EventRetrieval.js"></script>
 </head>
 <body class="body-gradient">
-    <%- include('partials/navBar.ejs') %>
+    <%- include('../partials/navBar.ejs') %>
     
     <div class="event-container" id="event-container">
         <h1 class="event-heading">Upcoming events</h1>
@@ -15,7 +13,11 @@
     
     <h1 class="event-heading past-event-heading">Past Events</h1>
     <div class="past-event-container" id="past-event-container"></div>
-    <%- include('partials/footer.ejs') %>
-    <script type="module" src="../jsAnimationFiles/events.js"></script>
+    <%- include('../partials/footer.ejs') %>
+    <script>
+        const serverData = <%- JSON.stringify(events) %>;
+    </script>
+    <script src="/events.js"></script> 
 </body>
 </html>
+
