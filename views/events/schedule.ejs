@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<%- include("../partials/head.ejs") %>
+    <link rel="stylesheet" href="/cssFiles/events.css">
+</head>
+<body>
+    <%- include("../partials/navBar.ejs") %>
+    <div class="create-event">
+        <form action="/events" method="POST" enctype="multipart/form-data">
+            <label for="name">Event Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="date">Date of Event:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="location">Event Location:</label>
+            <input type="text" id="location" name="location" required>
+            <label for="points">Points Given:</label>
+            <input type="number" id="points" name="points">
+            <label for="hours">Hours Provided:</label>
+            <input type="number" id="hours" name="hours">
+            <label for="description">Event Description:</label>
+            <input type="text" id="description" name="description" required>
+            <label for="coverImage">Cover Image:</label>
+            <input type="file" id="coverImage" name="coverImage" accept="image/*" required>
+            <button>Schedule</button>
+        </form>
+    </div>
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+</html>

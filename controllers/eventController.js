@@ -1,8 +1,9 @@
 const Event = require("../models/Event");
+const sharp = require("sharp");
 
 module.exports.events_index = (req, res) => {
     Event.find()
-    .sort({ createdAt: -1 })
+    .sort({ date: 1 })
     .then( result => {
         // console.log(result);
         res.render("events/index", {
@@ -33,13 +34,23 @@ module.exports.event_get = (req, res) => {
     });
 };
 
-module.exports.event_post = (req, res) => {
-    const event = new Event(req.body);
+module.exports.event_post = async (req, res) => {
+    try {
+        const compressedBuffer = await sharp(req.file.buffer)
+        .resize({ width: 300, height: 700,  fit: 'inside'})
+        .jpeg({ quality: 100 })
+        .toBuffer();
+        const base64String = compressedBuffer.toString('base64');
+        const basicInfo = req.body;
+        delete basicInfo.cover
+        basicInfo.coverImage = `data:image/jpeg;base64,${base64String}`;
+        const event = new Event({ ...basicInfo, attendees: []});
 
-    event
-    .save()
-    .then(result => res.redirect("/events"))
-    .catch(err => console.log(err));
+        event.save().then(result => res.redirect("/events")).catch(err => console.log(err));
+    }
+    catch(err) {
+        console.log(err);
+    }
 };
 
 module.exports.event_cancel = (req, res) => {
@@ -63,7 +74,7 @@ module.exports.event_attendee_update = async (req, res) => {
     })
     .then(result => {
         res.json({
-            redirect: "/events",
+            action: "location.reload()"
         });
     })
     .catch(err => console.log(err));

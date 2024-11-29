@@ -4,8 +4,12 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const eventsRouter = require("./routes/eventRoutes");
+// const multer = require("multer");
 
+// Allow environment variables
 dotenv.config();
+
+// Express Application
 const app = express();
 
 // Middleware
@@ -29,12 +33,6 @@ app.get('/', (req, res) => {
     res.render("home", { title: "Home" });
 });
 
-// app.get('/events', (req, res) => {
-//     res.render('events/index', { title: "Events" });
-// });
-
-app.use('/events', eventsRouter);
-
 app.get('/profile', (req, res) => {
     res.render('profile', { title: "Profile" })
 });
@@ -42,6 +40,8 @@ app.get('/profile', (req, res) => {
 app.get('/about', (req, res) => {
     res.render("about", { title: "About" });
 });
+
+app.use('/events', eventsRouter);
 
 // 404 Page
 // app.use((req, res) => {

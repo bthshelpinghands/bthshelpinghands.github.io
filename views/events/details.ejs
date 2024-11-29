@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/cssFiles/events.css">
+</head>
+<body>
+    <%- include('../partials/navBar.ejs') %>
+    <div>
+        <div>
+            <img src=<%= event.coverImage %> alt="Event Image" >
+            <div>
+                <h2><%= event.title %></h2>
+                <h3>Date: <%= event.date %></h3>
+                <h3>Location: <%= event.location %></h3>
+                <h3>Points: <%= event.points %></h3>
+                <h3>Hours: <%= event.hours %></h3>
+            </div>
+        </div>
+        <div>
+            <%= event.description %>
+        </div>
+        <div>
+            Attendees:
+            <% if(event.attendees.length > 0) { %>
+            <ol>
+                <% event.attendees.forEach(attendee => { %>
+                    <li><%= attendee %></li>
+                <% });%>
+            </ol>
+            <% } else { %>
+                <h1>There are currently nobody attending this event</h1>
+            <% } %>
+        </div>
+        <button class="delete" data-doc="<%= event._id %>">Cancel Event</button>
+    </div>
+    <%- include("../partials/footer.ejs") %>
+    <script>
+        const delete_event_button = document.querySelector('button.delete');
+        const delete_endpoint = `/events/${delete_event_button.dataset.doc}`;
+        delete_event_button.addEventListener('click', (e) => {
+            fetch(delete_endpoint, {
+                method: "DELETE",
+            }).then(result => result.json()).then(data => window.location.href=data.redirect).catch(err => console.log(err));
+        });
+    </script>
+</body>
+</html>

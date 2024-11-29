@@ -4,19 +4,20 @@ const Schema = mongoose.Schema;
 const eventSchema = new Schema({
     name: {
         type: String,
-        required: [true, "Please Enter a Name for the Event"]
+        required: true,
+        unique: true,
     },
     date: {
         type: Date,
-        required: [true, "Please Enter the Date of the Event"],
+        required: true,
     },
     location: {
         type: String,
-        required: [true, "Please Enter the Location of the Event"]
+        required: true
     },
     description: {
         type: String,
-        required: [true, "Please give a Description for the Event"]
+        required: true
     },
     points: {
         type: Number,
@@ -32,7 +33,7 @@ const eventSchema = new Schema({
     },
     coverImage: {
         type: String,
-        required: false
+        required: true
     }
 }, { timestamps: true });
 
