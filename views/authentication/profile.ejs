@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <%- include('partials/head.ejs'); %>
     <link rel="stylesheet" href="/cssFiles/profile.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script type="module" src="../modules/studentData.js"></script>
-    <script type="module" src="../modules/StudentInfoRetrieval.js"></script> 
 </head> 
 <body class="body-gradient">
     <%- include('partials/navBar.ejs')%>
@@ -79,6 +76,9 @@
         </div>
     </div>
     <%- include('partials/footer.ejs'); %>
-    <script type="module" src="../jsAnimationFiles/profile.js"></script>
+    <script>
+        const serverData = res.local.data;
+    </script>
+    <script src="/profile.js"></script>
 </body>
 </html>

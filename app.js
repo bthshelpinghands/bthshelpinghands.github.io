@@ -4,7 +4,8 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const eventsRouter = require("./routes/eventRoutes");
-// const multer = require("multer");
+const authRouter = require("./routes/authRoutes");
+const { checkUser, requireAuth } = require("./middleware/auth-middleware");
 
 // Allow environment variables
 dotenv.config();
@@ -29,11 +30,12 @@ mongoose.connect(process.env.MONGODB_URI)
 
 
 // Routes
+app.get("*", checkUser);
 app.get('/', (req, res) => {
     res.render("home", { title: "Home" });
 });
 
-app.get('/profile', (req, res) => {
+app.get('/profile', requireAuth, (req, res) => {
     res.render('profile', { title: "Profile" })
 });
 
@@ -42,6 +44,7 @@ app.get('/about', (req, res) => {
 });
 
 app.use('/events', eventsRouter);
+app.use(authRouter);
 
 // 404 Page
 // app.use((req, res) => {

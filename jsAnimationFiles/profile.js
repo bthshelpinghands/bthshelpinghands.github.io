@@ -1,10 +1,9 @@
-import { getStudentTotal, getStudentAllEventsAttended } from "../../modules/StudentInfoRetrieval.js"
-const studentTotalInfo = getStudentTotal(111111111);
+const studentTotalInfo = serverData;
 let points = studentTotalInfo.totalPoints;
 let hours = studentTotalInfo.totalHours;
 
 let eventLogChart = document.getElementById("event-log-chart")
-let eventLogList = getStudentAllEventsAttended(111111111);
+let eventLogList = serverData.eventsAttended;
 
  for (const event of eventLogList) {
     let newRow = document.createElement("tr")
